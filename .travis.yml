@@ -1,0 +1,25 @@
+sudo: required
+matrix:
+  include:
+  - language: ruby
+    rvm: 2.2
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/rubocop-travis.git travis/rubocop
+    install:
+      - ./travis/rubocop/install.sh
+    script:
+      - ./travis/rubocop/scan.sh
+  - language: ruby
+    rvm: 2.2
+    before_install:
+      - mkdir travis
+      - git clone https://github.com/TravisToolbox/awesomebot-travis.git travis/awesomebot
+    install:
+      - ./travis/awesomebot/install.sh
+    script:
+      - ./travis/awesomebot/scan.sh
+notifications:
+  email: false
+  slack:
+    secure: kDZ3iqulOmzmlsLIevSRqYMPjNHr1R+a7xw5lDdiJz44zMgk7PkoTs3e28h8Y1hgeeX4FCIP5Q4KRWWg5cVR01/S8DNF/JW/XSnuW1ADv5LiqNDG5nQV0ghURvCqGoX+nc9T8XYghz/p7gcU1lFyJBiPI20USCKOBR6Pe3LMyPiCrc22rY8NJkiLUxOr93wvpJicwtLKx/QeUSoB7XM1nrDEPmlHoMXR+z66bxPcyXO3wEwuO1v+8PnhK4urK+9nr/Z9qKIOw1SSnXVgdp/1zNvhoO+5fL8T6IKyyCQYdYihEa4CBWo4+jwWlAjpLWkfNLBebS+adEygxtZUnVUFOJqF82xUZjN0jYJlIiDUXTFcbuM8ktszYrpFuC714973szScrC+mOoO88AUERqD3ZNKZUyN2+G0HMZGFG//KszQI0jObvOw3n+a3pv0T2n7p2Hz4u7jrnK94oY9AeL5gSFQrDbQ4bRnpqF/Qo6KqfcyvxnMn1v8aO3yF6QScOnSeZvwRJjbsC+ReWLPoDOzCIMuZEZBnk/ma570/f1ZcEA+F6dsOo6IQhGR6UD4y3r0+XqMKmqQjGqldV3LaPnrDoxapTMDbM/vIDP1rndjZYsKBgHGXjeYx/3wKFHKAGNysR02wzpQUaFl7R9XUuYGliyQLvtiQIk6GcVhsusLPXTM=

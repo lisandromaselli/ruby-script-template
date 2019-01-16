@@ -1,0 +1,20 @@
+Layout/IndentationWidth:
+  Width: 4
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/LineLength:
+  Max: 180
+
+Metrics/BlockLength:
+  Max: 40
+
+Metrics/MethodLength: 
+  Max: 40
+
+Style/GlobalVars:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
