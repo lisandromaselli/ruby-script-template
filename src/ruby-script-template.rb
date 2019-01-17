@@ -133,6 +133,20 @@ def show_warning(message = nil)
 end
 
 # -------------------------------------------------------------------------------- #
+# Show Success                                                                     #
+# -------------------------------------------------------------------------------- #
+# A simple wrapper function to show something was a success.                       #
+# -------------------------------------------------------------------------------- #
+
+def show_success(message = nil)
+    if $USE_COLOURS
+        puts message.green unless message.nil?
+    else
+        puts message unless message.nil?
+    end
+end
+
+# -------------------------------------------------------------------------------- #
 # Check Root                                                                       #
 # -------------------------------------------------------------------------------- #
 # If required ensure the script is running as the root user.                       #
@@ -177,7 +191,7 @@ end
 # -------------------------------------------------------------------------------- #
 
 def main
-    check_root if $CHECK_ROOT
+    check_root if $ROOT_ONLY
     gather_script_info
     process_arguments
 end
