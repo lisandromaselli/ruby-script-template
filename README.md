@@ -19,7 +19,7 @@ A simple ruby script template with all the basic functionality you could need to
 ## Getting Started
 
 1. Clone the repository (git clone https://github.com/AntiPhotonltd/ruby-script-template)
-2. Edit the script (vi src/ruby-script-template.sh)
+2. Edit the script (vi src/ruby-script-template.rb)
 3. Edit process_arguments to reflect your cli requirements
 4. Edit wrapper to do whatever you need your script to do
 
