@@ -112,11 +112,9 @@ end
 # -------------------------------------------------------------------------------- #
 
 def show_error(message = nil)
-    if $USE_COLOURS
-        puts message.red unless message.nil?
-    else
-        puts message unless message.nil?
-    end
+    return if message.nil?
+
+    real_show_messge(message, :red)
 end
 
 # -------------------------------------------------------------------------------- #
@@ -126,11 +124,9 @@ end
 # -------------------------------------------------------------------------------- #
 
 def show_warning(message = nil)
-    if $USE_COLOURS
-        puts message.yellow unless message.nil?
-    else
-        puts message unless message.nil?
-    end
+    return if message.nil?
+
+    real_show_messge(message, :yellow)
 end
 
 # -------------------------------------------------------------------------------- #
@@ -140,10 +136,24 @@ end
 # -------------------------------------------------------------------------------- #
 
 def show_success(message = nil)
+    return if message.nil?
+
+    real_show_messge(message, :green)
+end
+
+# -------------------------------------------------------------------------------- #
+# Show Success                                                                     #
+# -------------------------------------------------------------------------------- #
+# A simple wrapper function to show something was a success.                       #
+# -------------------------------------------------------------------------------- #
+
+def real_show_messge(message, colour)
+    return if message.nil?
+
     if $USE_COLOURS
-        puts message.green unless message.nil?
+        puts message.colorize(colour)
     else
-        puts message unless message.nil?
+        puts message
     end
 end
 
