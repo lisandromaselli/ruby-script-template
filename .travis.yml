@@ -1,9 +1,9 @@
 matrix:
   include:
   - language: ruby
-    name: "Rubocop (rvm 2.4.4)"
+    name: "Rubocop (rvm 2.4)"
     env: SKIP_INTERPRETER=true
-    rvm: 2.4.4
+    rvm: 2.4
     before_install:
       - git clone https://github.com/TravisToolbox/rubocop-travis.git
     install:
@@ -11,9 +11,9 @@ matrix:
     script:
       - ./rubocop-travis/scan.sh
   - language: ruby
-    name: "Rubocop (rvm 2.5.3)"
+    name: "Rubocop (rvm 2.5)"
     env: SKIP_INTERPRETER=true
-    rvm: 2.5.3
+    rvm: 2.5
     before_install:
       - git clone https://github.com/TravisToolbox/rubocop-travis.git
     install:
@@ -21,9 +21,9 @@ matrix:
     script:
       - ./rubocop-travis/scan.sh
   - language: ruby
-    name: "Rubocop (rvm 2.6.1)"
+    name: "Rubocop (rvm 2.6)"
     env: SKIP_INTERPRETER=true
-    rvm: 2.6.1
+    rvm: 2.6
     before_install:
       - git clone https://github.com/TravisToolbox/rubocop-travis.git
     install:
@@ -31,8 +31,8 @@ matrix:
     script:
       - ./rubocop-travis/scan.sh
   - language: ruby
-    name: "Link Checker (rvm 2.6.1)"
-    rvm: 2.6.1
+    name: "Link Checker (rvm 2.6)"
+    rvm: 2.6
     before_install:
       - mkdir travis
       - git clone https://github.com/TravisToolbox/awesomebot-travis.git travis/awesomebot
