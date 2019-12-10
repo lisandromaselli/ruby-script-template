@@ -13,6 +13,9 @@ Metrics/BlockLength:
 Metrics/MethodLength: 
   Max: 40
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Style/GlobalVars:
   Enabled: false
 
