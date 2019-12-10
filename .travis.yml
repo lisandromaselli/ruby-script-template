@@ -31,6 +31,16 @@ matrix:
     script:
       - ./rubocop-travis/scan.sh
   - language: ruby
+    name: "Rubocop (rvm 2.7)"
+    env: SKIP_INTERPRETER=true
+    rvm: 2.7
+    before_install:
+      - git clone https://github.com/TravisToolbox/rubocop-travis.git
+    install:
+      - ./rubocop-travis/install.sh
+    script:
+      - ./rubocop-travis/scan.sh
+  - language: ruby
     name: "Link Checker (rvm 2.6)"
     rvm: 2.6
     before_install:
